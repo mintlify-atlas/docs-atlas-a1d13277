@@ -1,0 +1,128 @@
+{
+  "projectType": "cli-tool",
+  "projectName": "Claude Code",
+  "projectDescription": "An AI-powered coding agent that runs in your terminal, giving Claude direct access to your codebase and development tools to help you write, edit, debug, and review code.",
+  "theme": "luma",
+  "primaryColor": "#D97757",
+  "lightColor": "#FFF0EA",
+  "darkColor": "#8B3A20",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/how-it-works",
+              "concepts/memory-context",
+              "concepts/permissions",
+              "concepts/tools"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/authentication",
+              "guides/mcp-servers",
+              "guides/hooks",
+              "guides/skills",
+              "guides/multi-agent"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/settings",
+              "configuration/claudemd",
+              "configuration/environment-variables"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reference",
+        "groups": [
+          {
+            "group": "Commands",
+            "pages": [
+              "reference/commands/overview",
+              "reference/commands/slash-commands",
+              "reference/commands/cli-flags"
+            ]
+          },
+          {
+            "group": "Built-in Tools",
+            "pages": [
+              "reference/tools/bash",
+              "reference/tools/file-operations",
+              "reference/tools/search",
+              "reference/tools/web",
+              "reference/tools/agent"
+            ]
+          },
+          {
+            "group": "SDK & Extensibility",
+            "pages": [
+              "reference/sdk/overview",
+              "reference/sdk/hooks-reference",
+              "reference/sdk/permissions-api"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive terminal REPL powered by Claude AI for coding tasks",
+    "Built-in file editing, reading, and searching tools",
+    "Bash command execution with configurable permission modes",
+    "MCP (Model Context Protocol) server integration for extensibility",
+    "Multi-agent swarm support for parallelizing complex tasks",
+    "Hook system for running shell commands on tool events",
+    "Skills system for on-demand repeatable workflows",
+    "Memory system via CLAUDE.md files at global and project levels",
+    "IDE integration (VS Code, JetBrains, etc.)",
+    "Git-aware context and built-in commit/review workflows"
+  ],
+  "publicApiSurface": [
+    "claude (CLI entrypoint)",
+    "--print / -p (non-interactive output mode)",
+    "--output-format (json|text|stream-json)",
+    "--permission-mode (default|acceptEdits|bypassPermissions|plan)",
+    "--model (model selection)",
+    "--add-dir (additional context directories)",
+    "--mcp-config (MCP server configuration)",
+    "/init (generate CLAUDE.md for a project)",
+    "/memory (edit memory files)",
+    "/hooks (configure tool event hooks)",
+    "/mcp (manage MCP servers)",
+    "/permissions (manage tool permissions)",
+    "/plan (enter plan mode)",
+    "/model (switch models)",
+    "/commit (AI-assisted git commit)",
+    "/review (AI-powered code review)",
+    "/skills (list available skills)",
+    "/compact (summarize conversation context)",
+    "BashTool",
+    "FileReadTool (Read)",
+    "FileEditTool",
+    "FileWriteTool",
+    "GlobTool",
+    "GrepTool",
+    "WebFetchTool",
+    "WebSearchTool",
+    "AgentTool (Task)",
+    "TodoWriteTool",
+    "MCPTool",
+    "SDK control protocol (entrypoints/sdk/)"
+  ]
+}
